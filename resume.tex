@@ -1,0 +1,67 @@
+\documentclass[margin,line]{resume}
+
+    \newif\ifReferences
+    \newif\ifOnline
+    \usepackage{hyperref}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+
+    %Make bottom margin nicer
+    \addtolength{\textheight}{-1.00in}
+
+    %% clear default headers and footers
+    \fancyhead{}
+    \fancyfoot{}
+
+    \fancyfoot[RO,RE]{\thepage}
+    \fancyfoot[LO,LE]{\small{Max von Hippel}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+
+    % % General document formatting
+    % \usepackage[margin=0.7in]{geometry}
+    % \usepackage[parfill]{parskip}
+    % \usepackage[utf8]{inputenc}
+    
+    % % Related to math
+    \usepackage{amsmath,amssymb,amsfonts,amsthm,graphicx}
+    \usepackage[skins]{tcolorbox}
+
+    \newtcbox{\whiteshadowbox}[1][]{%
+      enhanced, 
+      center upper,
+      fontupper=\large\bfseries,
+      drop fuzzy shadow southeast,
+      boxrule=0.4pt,
+      sharp corners,
+      colframe=black,
+      colback=white!10,
+      left=2pt,
+      right=2pt,
+      before={\begin{center}},
+        after={\end{center}},
+      #1%
+    }
+
+
+\begin{document}
+
+\Referencesfalse
+\Onlinefalse
+
+\name{\Large Sophia von Hippel}
+\begin{resume}
+\input{sections/contact}
+\input{sections/interests}
+\input{sections/education}
+\input{sections/professional}
+\input{sections/publications}
+\input{sections/talks}
+\input{sections/courses}
+\input{sections/awards}
+\input{sections/leadership}
+\input{sections/tools}
+\input{sections/membership}
+\end{resume}
+
+\end{document}
